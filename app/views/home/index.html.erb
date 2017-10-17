@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <%= stylesheet_link_tag  'home' %>
+  </head>
+
+  <body>
+      <div id="welcome">
+        <b>Welcome to ModelMailer System</b>
+      </div>
+
+      <div id="info">
+        <b>We expect to Connect people together </b>
+        <div id="image">
+          
+      
+        </div>
+      </div>
+
+      <div id="login">
+       <button onclick="location.href='<%= login_path %>'" class="btn btn-success btn-block">Login With US</button>
+      </div>
+
+      <div id="register">
+        
+      
+       <a href="<%= new_user_path %>"><span>Register Account ?</span></a>
+      </div>
+
+
+  </body>
+</html>

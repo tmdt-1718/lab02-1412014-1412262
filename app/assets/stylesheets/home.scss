@@ -1,0 +1,49 @@
+@import "bootstrap";
+
+body{
+	background-color:#5D92BA;
+}
+#welcome{
+	height: 100px;
+	background-color: #4267B2;
+	b{
+		color: white;
+		font-size: 48px;
+	}
+
+}
+
+#info{
+	height: 250px;
+	background-color: #B5D6DB;
+	b{
+		color: white;
+		font-size: 48px;
+	}
+	margin-top: 30px;
+}
+
+#image {
+	height: 170px;
+	background-image: image-url('homeinfo.jpg');
+	background-repeat: repeat-x;
+}
+#login{
+	
+	margin-top: 30px;
+	button{
+		height: 70px;
+
+	}
+}
+
+#register{
+	margin-top: 30px;
+	text-align: center;
+	a{
+		span{
+			color: white;
+		}
+	}
+	
+}

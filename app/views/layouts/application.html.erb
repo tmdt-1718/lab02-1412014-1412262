@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   
+     
+        <!--Header-->
+        <div class="col-md-12">
+            <%= render 'layouts/header' %>
+        </div>
+       
+      
+      <div class="col-md-12">
+        <div class="col-md-3">
+            <!--Left Menu -->
+            <!--2 cach de render https://richonrails.com/articles/partials-in-ruby-on-rails -->
+            <%= render 'layouts/leftmenu' %>
+        </div>
+        <div class="col-md-9 mt-2">
+           <!--Content -->
+           <%= render 'layouts/content' %>
+        </div>
+     </div>
+   
+
+
+  </body>
+</html>

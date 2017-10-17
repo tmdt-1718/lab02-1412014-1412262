@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Simple login form</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <%= stylesheet_link_tag  'register' %>
+  
+
+  
+</head>
+
+<body>
+  <div class="container">
+  <div class="login">
+    <h1 class="login-heading">
+      <strong>Welcome.</strong> Please login.</h1>
+      
+
+      <%= form_with scope: :user, url: users_path, local: true do |f|%>
+    
+      <%= f.text_field :name , class: "input-txt" %>
+    
+ 
+      <%= f.text_field :email , class: "input-txt" %>
+    
+  
+      <%= f.password_field :password , class: "input-txt" %>
+    
+
+      <div class="login-footer">
+            <button type="submit" class="btn btn--right">Submit</button></br> 
+      </div>
+     
+    <% end %>
+
+  </div>
+</div>
+  
+ 
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/web
+    entrypoint: sh /web/script/startup.sh
+    links:
+      - db
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_USER=web
+    
+
