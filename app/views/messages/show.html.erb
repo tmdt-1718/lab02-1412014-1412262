@@ -1,0 +1,30 @@
+<div class="col-md-12">
+	<div class="row" id="sender">
+		<p>Nguoi Gửi: </p><strong>&nbsp<%=@message.smessage.user.email%></strong>
+	</div>
+	<div class="row" id="senddate">
+		<p>Ngày gui: </p><i>&nbsp<%=@message.rmessage.created_at%></i>
+	</div>
+	<div class="row" id="body">
+		<p>Nội dung </br><i> <%=@message.body%></i></p>
+	</div>
+</div>
+<style type="text/css">
+	#sender{
+		height: 50px;
+		border-bottom: 1px solid #F6F6F6; 
+		line-height: 60px;
+	}
+	#senddate{
+		height: 50px;
+		border-bottom: 1px solid #F6F6F6; 
+		line-height: 60px;
+	}
+	#body{
+		padding-top: 20px;
+		height: auto;
+		border: 1px solid #F6F6F6; 
+		line-height: 30px;
+	}
+</style>
+

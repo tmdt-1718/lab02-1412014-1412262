@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  
+  has_many :rmessages
+  has_many :smessages
+  has_many :relationship_requests
  	has_and_belongs_to_many(:users,
     :join_table => "user_connections",
     :foreign_key => "user_a_id",

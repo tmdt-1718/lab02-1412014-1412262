@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <tr>
+      
+      <th>Ten</th>
+      <th>Email</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+  	<% if (@friends.present?) %>
+    <% @friends.each do |user| %>
+  
+        <tr>
+           <td><%= user.name %></td>
+          <td><%= user.email %></td> 
+        </tr>
+   
+
+    <% end %>
+    <%else%>
+
+	<%end%>
+  </tbody>
+</table>

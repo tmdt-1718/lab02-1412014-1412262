@@ -1,0 +1,32 @@
+
+
+<table class="table">
+  <thead>
+    <tr>
+     
+      <th>Nguoi Yeu Cau</th>
+      <th>Time</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% if (@users.present?) %>
+    <% @users.each do |user| %>
+  
+        <tr>
+          <td><%= user.user.email %></td>
+          <td><i><%= user.created_at %></i></td>
+          <td><button class="btn btn-success" onclick="location.href='<%= acceptrequest_path(user.user.id) %>'">Accept</button></td>
+        </tr>
+   
+
+    <% end %>
+    <%else%>
+
+	<%end%>
+  </tbody>
+</table>
+
+
+
+

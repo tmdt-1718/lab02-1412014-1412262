@@ -1,0 +1,64 @@
+<table class="table">
+  <thead>
+    <tr>
+     
+      <th>From</th>
+      <th>Descript</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rmss.each do |rm| %>
+    <% if !rm.readed %>
+         <tr onclick="location.href='<%= message_path(rm) %>'" style="background-color: #F6F6F6" id="read">
+          <td><strong><%= rm.sender %></strong></td>
+          <td id="<%=rm.id%>" class="body"><strong><%= rm.body %></strong></td>
+          <td><strong><%= rm.created_at %></strong></td>
+        </tr>
+    <% else %>
+        <tr>
+          <td><%= rm.sender %></td>
+          <td id="<%=rm.id%>" class="body"><%= rm.body %></td>
+          <td><%= rm.created_at %></td>
+        </tr>
+    <% end %>
+   
+
+    <% end %>
+  </tbody>
+</table>
+<script type="text/javascript">
+ 
+</script>
+<style type="text/css">
+
+  #read{
+  cursor: pointer;
+  }
+
+
+  table {
+    border-collapse:separate;
+    border:solid #E1E1E1 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+}
+
+
+
+td, th {
+   
+    border-left:solid #E1E1E1 1px;
+    border-top:solid #E1E1E1 1px;
+}
+
+th {
+    background-color: #218838;
+    border-top: none;
+    color: white;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
+</style>

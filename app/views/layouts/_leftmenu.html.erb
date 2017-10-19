@@ -1,24 +1,58 @@
 
-          <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+           <nav class="navbar navbar-expand-sm navbar-light bg-faded">
              
               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="exCollapsingNavbar">
-                <ul class="list-group" style="width: 250px;">
-                  <li class="list-group-item active">
-                    <a class="nav-link" href="#" style="color: red;">Home <span class="sr-only">(current)</span></a>
+                <ul class="list-group" style="width: 300px;">
+                   <li class="list-group-item">
+                    <button onclick="location.href='<%= login_path %>'" class="btn btn-success btn-block nav-link ">New Message</button>
+                  </li>
+                  <li class="list-group-item act">
+                    <a class="nav-link leftmenuitem" href="<%=receivefrom_path%>">Tin đã nhận</a>
+                  </li>
+                  <li class="list-group-item" >
+                    <a class="nav-link leftmenuitem" id="aa" >Tin đã gửi</a>
+                  </li>
+
+                   <li class="list-group-item" >
+                    <a class="nav-link leftmenuitem" href="<%=requests_path%>">Yeu cau ket ban</a>
+                   </li>
+
+                  <li class="list-group-item">
+                     <%= form_with scope: :user, url: request_user_path, local: true do |f|%>
+    
+                     <%= f.text_field :email , :placeholder=>"Email", class: "form-control" %>
+                     <button id="request" type="submit" class="btn btn--right">Add a friend</button>
+                     <% end %>
                   </li>
                   <li class="list-group-item">
-                    <a class="nav-link" href="#" style="color: red;">Features</a>
+                    <a class="nav-link leftmenuitem" href="<%=friends_path%>">Danh sách bạn</a>
                   </li>
-                  <li class="list-group-item">
-                    <a class="nav-link" href="#" style="color: red;">Pricing</a>
-                  </li>
-                  <li class="list-group-item">
-                    <a class="nav-link" href="#" style="color: red;">About</a>
+                   <li class="list-group-item">
+                    <a class="nav-link leftmenuitem" >Thêm bạn</a>
                   </li>
                 </ul>
               </div>
             </nav>
+            <script type="text/javascript">
+            
+               $( "#request" ).click(function() {
+                   // alert( "Handler for .click() called." );
+                    //alert($(".leftmenuitem").parent(".act"));
+                    ///$(this).parent().addClass("act");
+                    alert("Da gui yeu cau");
+                  
+                    console.log("It works on each visit!");
+                  });
+               
+               function abc(){
+                alert("Asdas");
+                   $( "#aa" ).parent().html("asdasdsdasds");
+               }
+             
+          
+              //$(document).on('page:load', ready);
+            </script>
         

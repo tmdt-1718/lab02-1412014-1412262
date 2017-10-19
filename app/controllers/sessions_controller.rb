@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 				user = User.authenticate!(session_params)
 				login(user)
 				flash[:success] = "Login successfully."
-				redirect_to home_index_path
+				redirect_to messages_path
 		rescue ActiveRecord::RecordNotFound => e
 				flash[:error] = "Wrong email or password."
 				render :new

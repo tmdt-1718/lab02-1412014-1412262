@@ -13,23 +13,27 @@
    
      
         <!--Header-->
-        <div class="col-md-12">
+        <div class="row" >
             <%= render 'layouts/header' %>
         </div>
        
       
-      <div class="col-md-12">
+      <div class="row">
         <div class="col-md-3">
             <!--Left Menu -->
             <!--2 cach de render https://richonrails.com/articles/partials-in-ruby-on-rails -->
             <%= render 'layouts/leftmenu' %>
+          
         </div>
-        <div class="col-md-9 mt-2">
+        <div class="col-md-9 mt-2 pull-left">
            <!--Content -->
-           <%= render 'layouts/content' %>
+           <div class="row">
+             <%= render 'layouts/content' %>
+           </div>
+           
         </div>
      </div>
-   
+  
 
 
   </body>

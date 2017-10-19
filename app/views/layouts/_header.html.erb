@@ -1,8 +1,8 @@
-  <div class="col-md-12">
+ 
     
-     <nav class="navbar navbar-expand-md navbar-light bg-light">
+     <nav class="navbar navbar-expand-md navbar-light bg-faded nav-inverse">
                 <a class="navbar-brand" href="#">
-                 <!-- <%= image_tag("logo.JPG", :alt => "rss feed", :class => "d-block img-fluid", :height =>"50", :width => "60")  %> -->
+                 <!-- <%= image_tag("homeinfo.jpg", :alt => "rss feed", :class => "d-block img-fluid", :height =>"50", :width => "60") %> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -10,19 +10,11 @@
 
                 <div  class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
-                     <li class="nav-item">
-                      <a class="nav-link" href="/albums">Albums</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/about">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/articles">Blogs</a>
-                    </li>
-                   <!-- <% if current_user %>
+                   
+                   <% if current_user %>
                         <li class="nav-item">
                           <a class="nav-link">
                             <%= current_user.name %>  
@@ -36,7 +28,7 @@
                         <li class="nav-item">
                           <%= link_to "Login", login_path, class: "nav-link" %>
                         </li>
-                        <% end %> -->
+                        <% end %>
                         
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
@@ -45,4 +37,3 @@
                   </form>
                 </div>
             </nav>
- </div>
