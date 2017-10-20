@@ -85,4 +85,4 @@ production:
   <<: *default
   database: web_production
   username: web
-  password: <%= ENV['WEB_DATABASE_PASSWORD'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
