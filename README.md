@@ -1,10 +1,10 @@
-﻿# BT-TMDT-2 - *Name of your app*
+﻿# BT-TMDT-2 - *ModelMail*
 
-**Name of your app** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
+**ModelMail** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
 
 Thành viên:
 * [ ] **MSSV1** Tên sinh viên 1 (tên tài khoản github)
-* [ ] **MSSV2** Tên sinh viên 2 (tên tài khoản github)
+* [x] **1412262** Tên sinh viên 2 (Lê Anh Khôi)
 
 URL: **URL hosting của bài tập**
 
@@ -24,7 +24,7 @@ Yêu cầu **bắt buộc**
 * [ ] Nhấn nút "tạo tin nhắn" sẽ chuyển sang giao diện cho phép người dùng gửi tin nhắn cho người dùng trong danh sách bạn bè. Người gửi phải nằm trong danh sách bạn bè và cho phép người dùng chọn qua dropdown. (**MSSV**)
 * [ ] Nhấn "xem tin đã gửi" sẽ chuyển sang giao diện hiển thị danh sách tin nhắn đã gửi. Mỗi tin nhắn cần hiện thời gian người nhận đã đọc. (**MSSV**)
 * [x] Mỗi người dùng chỉ có thể đọc tin nhắn 1 lần duy nhất. (**1412262**)
-* [ ] Người dùng chỉ có thể đọc tin nhắn khi họ nằm trong danh sách người nhận. (**MSSV**)
+* [x] Người dùng chỉ có thể đọc tin nhắn khi họ nằm trong danh sách người nhận. (**1412262**)
 
 Yêu cầu **không bắt buộc**:
 * [ ] Người dùng có thể gửi hình ảnh đính kèm theo thông điệp. (**MSSV**)
