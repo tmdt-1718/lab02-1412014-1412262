@@ -10,7 +10,7 @@
   <tbody>
     <% @rmss.each do |rm| %>
     <% if !rm.readed %>
-         <tr onclick="location.href='<%= message_path(rm) %>'" style="background-color: #F6F6F6" id="read">
+         <tr onclick="location.href='<%= showreceivefrom_path(rm) %>'" style="background-color: #F6F6F6" id="read">
           <td><strong><%= rm.sender %></strong></td>
           <td id="<%=rm.id%>" class="body"><strong><%= rm.body %></strong></td>
           <td><strong><%= rm.created_at %></strong></td>

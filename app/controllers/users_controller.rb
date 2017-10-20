@@ -26,27 +26,37 @@ class UsersController < ApplicationController
   def getrequest
     begin
       @user = User.find_by email: request_param[:email]
+      if(@user.present?)
+        @valid = RelationshipRequest.find_by receiver: @user.id, user_id: session[:current_user_id]
+        if @valid.present?
+          logger.debug "Da co trong danh sach yeu cau"
+          flash[:error] = "Da co trong danh sach yeu cau"
+        else
+          @u = @user.users.find_by(id: session[:current_user_id])
+         
+          if(@u.present?)
+              flash[:error] = "Da co trong danh sach ban be"
 
-      @valid = RelationshipRequest.find_by receiver: @user.id, user_id: session[:current_user_id]
-      if @valid.present?
-        logger.debug "Da co trong danh sach yeu cau"
-        flash[:success] = "Register successfully."
+          else 
+           
+            relate = RelationshipRequest.create!(receiver: @user.id, user_id: session[:current_user_id])
+            flash[:success] = "Send request successfully."
+          end
+         
+        end
       else
-        relate = RelationshipRequest.create!(receiver: @user.id, user_id: session[:current_user_id])
-        flash[:success] = "Register successfully."
-
-        logger.debug relate
+        flash[:error] = "Khong co nguoi nay"
       end
-      
     rescue ActiveRecord::RecordInvalid => e
       flash[:error] = "Cannot register new account."
 
     end
-   
+    redirect_to request.referrer
   end
 
   def requestsindex
     @users = RelationshipRequest.where("receiver = ?", session[:current_user_id])
+    @activeleftmenuitem = 4
   end
 
   def acceptrequest
@@ -67,6 +77,7 @@ class UsersController < ApplicationController
 
   def listfriends
     @friends = User.find(session[:current_user_id]).users
+    @activeleftmenuitem = 5
   end
 
   private

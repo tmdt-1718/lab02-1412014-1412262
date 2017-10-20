@@ -1,0 +1,48 @@
+
+<div class="col-md-12">
+  
+  <%= flash[:notice] %>
+  <%= form_with model: Message.new, local: true, :id=>"sendmessage" do |f|%>
+  <div class="form-group">
+    <label for="friends">Friends</label>
+    <!--<select class="form-control" id="friends">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>-->
+   
+    <%=select("message", "friend_id", User.find(session[:current_user_id]).users.collect {|p| [ p.name << ' ( ' << p.email << ' ) ', p.id ] }, {prompt: 'Select Friend' }, {:class=>"form-control",:id=>"friendselected"}) %>
+  </div>
+
+
+  <div class="form-group" style="height: 350px;">
+    <label for="area">Message</label>
+    <%= f.text_area :body, :id=>"area", :placeholder=>"Enter your message....", :style=>"height:92%", class: "form-control" %>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Send</button>
+
+        
+
+  <% end %>
+</div>
+<script type="text/javascript">
+
+  
+ // configure your validation
+ $("#sendmessage").submit(function(){
+  if($('#friendselected :selected').val()=="")
+  {
+    alert("Choose friend you want to send this message");
+    return false;
+  }
+  if($('#area').val()=="")
+  {
+    alert("Message is not empty");
+    return false;
+  }
+  return true;
+ });
+</script>

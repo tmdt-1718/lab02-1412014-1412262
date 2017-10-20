@@ -8,10 +8,14 @@ class SessionsController < ApplicationController
 	def create
 		begin
 
-				user = User.authenticate!(session_params)
+			user = User.authenticate!(session_params)
+			if(user != false)
 				login(user)
-				flash[:success] = "Login successfully."
-				redirect_to messages_path
+				redirect_to receivefrom_path
+			else
+				flash[:error] = "Wrong email or password."
+				redirect_to request.referrer
+			end
 		rescue ActiveRecord::RecordNotFound => e
 				flash[:error] = "Wrong email or password."
 				render :new

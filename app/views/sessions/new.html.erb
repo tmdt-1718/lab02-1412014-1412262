@@ -22,7 +22,7 @@
       <%= f.text_field :email , :placeholder=>"Email", class: "input-txt" %>
     
       <%= f.password_field :password , :placeholder=>"Password", class: "input-txt" %>
-    
+      <p><span style="color: red"><%=flash[:error]%></span></p>
 
       <div class="login-footer">
              <a href="#" class="lnk">

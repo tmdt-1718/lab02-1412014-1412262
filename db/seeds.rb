@@ -36,13 +36,13 @@
 #Rmessage.create(user_id: 1, message_id: 6, readed: false)
 
 
-#m1 = Rmessage.find(1)
-#m1.readed = false
-#m1.save
+m1 = Rmessage.find(5)
+m1.readed = false
+m1.save
 
-#m1 = Rmessage.find(2)
-#m1.readed = false
-#m1.save
+m1 = Rmessage.find(6)
+m1.readed = false
+m1.save
 
 #m1 = Rmessage.find(3)
 #m1.readed = false

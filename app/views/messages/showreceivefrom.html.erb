@@ -6,7 +6,7 @@
 		<p>Ngày gui: </p><i>&nbsp<%=@message.rmessage.created_at%></i>
 	</div>
 	<div class="row" id="body">
-		<p>Nội dung </br><i> <%=@message.body%></i></p>
+		<p><i><%=@message.body%></i></p>
 	</div>
 </div>
 <style type="text/css">
@@ -22,6 +22,7 @@
 	}
 	#body{
 		padding-top: 20px;
+		min-height: 390px;
 		height: auto;
 		border: 1px solid #F6F6F6; 
 		line-height: 30px;

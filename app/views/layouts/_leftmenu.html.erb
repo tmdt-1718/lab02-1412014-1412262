@@ -6,17 +6,17 @@
               </button>
               <div class="collapse navbar-collapse" id="exCollapsingNavbar">
                 <ul class="list-group" style="width: 300px;">
-                   <li class="list-group-item">
-                    <button onclick="location.href='<%= login_path %>'" class="btn btn-success btn-block nav-link ">New Message</button>
+                   <li class="list-group-item" id="item1">
+                    <button onclick="location.href='<%=new_message_path %>'" class="btn btn-success btn-block nav-link ">New Message</button>
                   </li>
-                  <li class="list-group-item act">
+                  <li class="list-group-item" id="item2">
                     <a class="nav-link leftmenuitem" href="<%=receivefrom_path%>">Tin đã nhận</a>
                   </li>
-                  <li class="list-group-item" >
-                    <a class="nav-link leftmenuitem" id="aa" >Tin đã gửi</a>
+                  <li class="list-group-item" id="item3" >
+                    <a class="nav-link leftmenuitem" id="aa" href="<%=sendto_path%>" >Tin đã gửi</a>
                   </li>
 
-                   <li class="list-group-item" >
+                   <li class="list-group-item" id="item4" >
                     <a class="nav-link leftmenuitem" href="<%=requests_path%>">Yeu cau ket ban</a>
                    </li>
 
@@ -25,17 +25,22 @@
     
                      <%= f.text_field :email , :placeholder=>"Email", class: "form-control" %>
                      <button id="request" type="submit" class="btn btn--right">Add a friend</button>
+                      <% if flash[:error] %>
+                        <p><span style="color: red"><%= flash[:error] %></span></p>
+                     <%else%>
+                        <p><span><span style="color: green;"><%= flash[:success] %></span></p>
+                     <%end%>
                      <% end %>
+                    
                   </li>
-                  <li class="list-group-item">
+                  <li class="list-group-item" id="item5">
                     <a class="nav-link leftmenuitem" href="<%=friends_path%>">Danh sách bạn</a>
                   </li>
-                   <li class="list-group-item">
-                    <a class="nav-link leftmenuitem" >Thêm bạn</a>
-                  </li>
+                  
                 </ul>
               </div>
             </nav>
+            <h1 id="hiddenvalue" style="display: none;"><%= @activeleftmenuitem %></h1>
             <script type="text/javascript">
             
                $( "#request" ).click(function() {
@@ -47,10 +52,13 @@
                     console.log("It works on each visit!");
                   });
                
-               function abc(){
-                alert("Asdas");
-                   $( "#aa" ).parent().html("asdasdsdasds");
+               function startup(){
+                
+                 var num = $('#hiddenvalue').text();
+                 $('#item' + num ).addClass("act");
+                
                }
+               startup();
              
           
               //$(document).on('page:load', ready);

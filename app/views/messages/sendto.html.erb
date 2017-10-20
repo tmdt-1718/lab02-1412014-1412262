@@ -1,0 +1,56 @@
+<table class="table">
+  <thead>
+    <tr>
+     
+      <th>From</th>
+      <th>Descript</th>
+      <th>Send Time</th>
+      <th>Readed At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @smss.each do |sm| %>
+         <tr onclick="location.href='<%= showsendto_path(sm) %>'" style="background-color: #F6F6F6" id="read">
+          <td><strong><%= sm.receiver %></strong></td>
+          <td><strong><%= sm.body %></strong></td>
+          <td><strong><%= sm.created_at %></strong></td>
+          <td><strong><%= sm.timereadedbyreceiver %></strong></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+<script type="text/javascript">
+ 
+</script>
+<style type="text/css">
+
+  #read{
+  cursor: pointer;
+  }
+
+
+  table {
+    border-collapse:separate;
+    border:solid #E1E1E1 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+}
+
+
+
+td, th {
+   
+    border-left:solid #E1E1E1 1px;
+    border-top:solid #E1E1E1 1px;
+}
+
+th {
+    background-color: #218838;
+    border-top: none;
+    color: white;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
+</style>

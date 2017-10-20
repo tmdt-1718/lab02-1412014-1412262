@@ -1,12 +1,12 @@
 <div class="col-md-12">
 	<div class="row" id="sender">
-		<p>Nguoi Gửi: </p><strong>&nbsp<%=@message.smessage.user.email%></strong>
+		<p>Nguoi Nhan: </p><strong>&nbsp<%=@message.rmessage.user.email%></strong>
 	</div>
 	<div class="row" id="senddate">
-		<p>Ngày gui: </p><i>&nbsp<%=@message.rmessage.created_at%></i>
+		<p>Ngày da doc: </p><i>&nbsp<%=@message.rmessage.updated_at%></i>
 	</div>
-	<div class="row" id="body">
-		<p>Nội dung </br><i> <%=@message.body%></i></p>
+	<div class="row mt-3" id="body">
+		<p><i><%=@message.body%></i></p>
 	</div>
 </div>
 <style type="text/css">
@@ -22,6 +22,7 @@
 	}
 	#body{
 		padding-top: 20px;
+		min-height: 390px;
 		height: auto;
 		border: 1px solid #F6F6F6; 
 		line-height: 30px;

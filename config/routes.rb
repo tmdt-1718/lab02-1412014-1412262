@@ -9,7 +9,9 @@ get 'users/acceptrequest/:id', to: "users#acceptrequest", as: :acceptrequest
 resources :users, only: [:index, :new, :create, :makerelation] 
 
 get '/messages/receive', to: 'messages#receivefrom', as: :receivefrom
+get '/messages/receive/:id', to: 'messages#showreceivefrom', as: :showreceivefrom
 get '/messages/send', to: 'messages#sendto', as: :sendto
+get '/messages/send/:id', to: 'messages#showsendto', as: :showsendto
 resources :messages, only: [:index, :new, :create, :show]
 
 
