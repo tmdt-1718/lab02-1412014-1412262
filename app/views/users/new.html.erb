@@ -20,17 +20,17 @@
 
       <%= form_with scope: :user, url: users_path, local: true do |f|%>
     
-      <%= f.text_field :name , class: "input-txt" %>
+      <%= f.text_field :name ,:placeholder=>"Your Name", class: "input-txt" %>
     
  
-      <%= f.text_field :email , class: "input-txt" %>
+      <%= f.text_field :email ,:placeholder=>"Enter Your Email", class: "input-txt" %>
     
   
-      <%= f.password_field :password , class: "input-txt" %>
+      <%= f.password_field :password ,:placeholder=>"Enter Your Password", class: "input-txt" %>
     
 
       <div class="login-footer">
-            <button type="submit" class="btn btn--right">Submit</button></br> 
+            <button type="submit" class="btn btn--right">Register</button></br> 
       </div>
      
     <% end %>
