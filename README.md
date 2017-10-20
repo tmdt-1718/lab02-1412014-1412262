@@ -6,7 +6,7 @@ Thành viên:
 * [x] **1412014** Phan Tuệ Anh (1412014us)
 * [x] **1412262** Lê Anh Khôi (1412262)
 
-URL: **URL hosting của bài tập**
+URL: **https://secure-woodland-99963.herokuapp.com/home**
 
 ## Yêu cầu
 
@@ -44,7 +44,7 @@ Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 
 ## Demo
 
-Link ảnh GIF demo ứng dụng:
+Link ảnh GIF demo ứng dụng:https://drive.google.com/open?id=0B6Cxm8ro0oCBUzhCdzVXX29XcG8
 
 ![Video Walkthrough](demo.gif)
 
