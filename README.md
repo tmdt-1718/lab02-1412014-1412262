@@ -3,7 +3,7 @@
 **ModelMail** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
 
 Thành viên:
-* [ ] **MSSV1** Tên sinh viên 1 (tên tài khoản github)
+* [ ] **1412014** Phan Tuệ Anh (1412014us)
 * [x] **1412262** Tên sinh viên 2 (Lê Anh Khôi)
 
 URL: **URL hosting của bài tập**
